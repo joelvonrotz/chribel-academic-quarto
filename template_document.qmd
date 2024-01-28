@@ -1,0 +1,50 @@
+---
+format:
+  chribel-academic-quarto-pdf:
+    include-in-header:
+    - text: "\\usepackage[datesep=.]{datetime2}"
+    - text: "\\DTMsetdatestyle{ddmmyyyy}"
+    - text: "\\usepackage{blindtext}"
+    toc: true
+
+title: "How to efficiently kick ass!"
+subtitle: "Ass Kicking Report Spring 2024"
+
+# [AUTHOR INFORMATION]
+author-title: "Author"
+author:
+  - "Me, the cool author"
+
+supervisor-title: "Supervisor"
+supervisor:
+  - "Mr. Supervising Superior"
+
+expert-title: "Experts"
+expert:
+  - "Expert #1"
+  - "Expert #2"
+
+university: "University of Happiness & Friendship"
+
+# [COVER IMAGE]
+cover-image: "rohit-tandon-9wg5jCEPBsw-unsplash.jpg"
+
+# [PAGE OPTIONS]
+lang: en-GB
+babel-lang: ukenglish
+
+# [HEADER & FOOTER]
+fancyhdr:
+  header:
+    right: "\\nouppercase{\\rightmark}" # add current section title
+    center: ""
+    left: "Ass Kicking FS24"
+  footer:
+    right: "Cool Author 3000"
+    center: "\\thepage\\ / \\pageref{LastPage}"
+    left: "\\DTMtoday"
+---
+
+```{=latex}
+\blinddocument
+```

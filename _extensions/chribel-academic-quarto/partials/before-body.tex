@@ -1,0 +1,93 @@
+\fancyhf{} % clear all header and footer fields
+% header
+$if(fancyhdr.header.right)$
+\fancyhead[R]{\sffamily $fancyhdr.header.right$}
+$endif$
+
+$if(fancyhdr.header.center)$
+\fancyhead[C]{\sffamily $fancyhdr.header.center$}
+$endif$
+
+$if(fancyhdr.header.left)$
+\fancyhead[L]{\sffamily $fancyhdr.header.left$}
+$endif$
+
+% header
+$if(fancyhdr.footer.right)$
+\fancyfoot[R]{\sffamily $fancyhdr.footer.right$}
+$endif$
+
+$if(fancyhdr.footer.center)$
+\fancyfoot[C]{\sffamily $fancyhdr.footer.center$}
+$endif$
+
+$if(fancyhdr.footer.left)$
+\fancyfoot[L]{\sffamily $fancyhdr.footer.left$}
+$endif$
+
+
+\newgeometry{nohead,top=0mm} % easier for image placement
+
+\begin{titlepage}
+  \begin{center}
+    \vspace*{5mm}
+    $if(cover-image)$
+    \makebox[\textwidth]{\includegraphics[width=\paperwidth]{$cover-image$}}
+    \vspace{5mm}
+    $else$
+    \vspace{40mm}
+    $endif$
+    
+    {\textsf{\textbf{\Huge $title$}}}\\
+    \vspace{0.3cm}
+    \textsf{\textit{\large $subtitle$}}
+    
+    \vspace{1cm}
+    % Render author and supervisor 
+    \begin{multicols}{2}
+      \begin{flushleft}
+        \textsf{\textbf{$author-title$}\normalsize}\\
+        $if(author/allbutlast)$
+          $for(author/allbutlast)$
+            \textsf{$author$}\\
+          $endfor$
+        $endif$
+        \textsf{$author/last$}\\
+      \end{flushleft}
+
+      \vfill\null
+      \columnbreak
+
+      \begin{flushright}
+        \textsf{\textbf{$supervisor-title$}\normalsize}\\
+        $if(supervisor/allbutlast)$
+          $for(supervisor/allbutlast)$
+            \textsf{$supervisor$}\\
+          $endfor$
+        $endif$
+        \textsf{$supervisor/last$}\\[0.4cm]
+
+        \textsf{\textbf{$expert-title$}\normalsize}\\
+        $if(expert/allbutlast)$
+          $for(expert/allbutlast)$
+            \textsf{$expert$}\\
+          $endfor$
+        $endif$
+        \textsf{$expert/last$}
+
+      \end{flushright}
+    \end{multicols}
+    \vfill
+    % \includegraphics{images/hslu_logo.pdf}\\[1cm]
+    \textsf{$university$}
+  \end{center}
+  \normalfont
+\end{titlepage}
+
+\restoregeometry
+
+$if(abstract)$
+\begin{abstract}
+$abstract$
+\end{abstract}
+$endif$

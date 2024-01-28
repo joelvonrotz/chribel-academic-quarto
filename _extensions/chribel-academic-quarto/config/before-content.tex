@@ -1,0 +1,25 @@
+% Workaround to fix some subtle things, such as caption style for code blcocks.
+
+% changes the preset style
+\floatsetup[codelisting]{style=MyListingStyle}
+
+% include the current section number into the different caption types
+\numberwithin{equation}{section}
+\numberwithin{codelisting}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+% if no code blocks are used, 'Shaded' doesn't exist!
+\ifdefined\Shaded
+  % redefine the Shaded environment to make the codeblock more bearable to 
+  \renewenvironment{Shaded}
+    {\begin{tcolorbox}[rounded corners,
+      colback={codebgcolor},
+      colframe={codebgcolor},
+      enhanced,
+      boxrule=0mm,
+      left=2mm,
+      breakable
+    ]}
+    {\end{tcolorbox}}
+\fi
