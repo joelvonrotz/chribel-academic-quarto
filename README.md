@@ -148,18 +148,18 @@ fancyhdr:
   footer:
     right: "Cool Author 3000"
     center: "\\thepage\\ / \\pageref{LastPage}"
-    left: "\\DTMtoday"
+    left: "\\today"
 ```
 
 > [!CAUTION]
-> Right now the date format is 'hardcoded' into the template and can be changed by...
-> 1. ...opening `_extensions/chribel-academic-quarto/config/preamble.tex` and...
-> 2. ...editing line 10 & 11 to the fitting format.
+> Changing the date format is a bit finicky, but it is possible. Following example sets the date format to 'DD.MM.YYYY'.
 >
 > ```latex
-> 10   \usepackage[datesep=.]{datetime2}
-> 11   \DTMsetdatestyle{ddmmyyyy}
+> \usepackage[datesep=.]{datetime2}
+> \DTMsetdatestyle{ddmmyyyy}
 > ```
+>
+> `\today` needs to be replaced with `\DTMtoday` in the document.
 
 ## Example
 
