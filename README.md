@@ -1,3 +1,5 @@
+![template](template.png)
+
 # Chribel Academic Quarto
 
 A quarto template which can be used to write a bachelor thesis and other stuff. It uses `pdflatex`!
