@@ -11,7 +11,6 @@ contributes:
       pdf-engine: pdflatex
       documentclass: article
 
-      
       # [PAGE SETTINGS]
       geometry:
         - "top=30mm"
@@ -20,15 +19,17 @@ contributes:
         - "right=25mm"
       pagenumbering: none
       papersize: a4
+      fontenc: T1
       fontsize: 10pt
 
       # [DOCUMENT STRUCTURES]
-      include-in-header:
-        - config/preamble.tex
       include-before-body: 
         - config/before-content.tex
+      include-in-header:
+        - config/preamble.tex
       template-partials:
         - partials/before-body.tex
+        - partials/before-title.tex
 
       # [BIBLIOGRAPHY OPTIONS]
       cite-method: biblatex

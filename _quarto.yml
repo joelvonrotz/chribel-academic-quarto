@@ -14,6 +14,7 @@ format:
 # ========================================================================================
 title: "How to efficiently kick ass!"
 subtitle: "Ass Kicking Report Spring 2024"
+date: now
 
 # [AUTHOR INFORMATION]
 author-title: "Author"
@@ -48,3 +49,10 @@ fancyhdr:
     right: "Cool Author 3000"
     center: "\\thepage\\ / \\pageref{LastPage}"
     left: "\\DTMtoday"
+
+# [FONT CONFIGURATION]
+chribel-fontfamily:
+  - name: AlegreyaSans      # used for section headings, title page
+  - name: cmbright          # used for paragraph and math
+  - name: inconsolata
+    options: "scaled=0.95"  # for code blocks

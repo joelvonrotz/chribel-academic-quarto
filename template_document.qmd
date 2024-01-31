@@ -7,8 +7,10 @@ format:
     - text: "\\usepackage{blindtext}"
     toc: true
 
-title: "How to efficiently kick ass!"
-subtitle: "Ass Kicking Report Spring 2024"
+# [DOCUMENT INFORMATION]
+title: "A Summary Title"
+subtitle: "Summary"
+date: now
 
 # [AUTHOR INFORMATION]
 author-title: "Author"
@@ -43,8 +45,68 @@ fancyhdr:
     right: "Cool Author 3000"
     center: "\\thepage\\ / \\pageref{LastPage}"
     left: "\\DTMtoday"
+
+
+# [FONT CONFIGURATION]
+chribel-fontfamily:
+  - name: AlegreyaSans      # used for section headings, title page
+  - name: cmbright          # used for paragraph and math
+  - name: inconsolata
+    options: "scaled=0.95"  # for code blocks
 ---
 
-```{=latex}
-\blinddocument
+```cpp
+int8_t hello;
+
+void main(void) {
+  hello = 1;
+
+  while(true) {
+    hello++;
+    if(hello=10) {
+      hello = 0;
+    }
+  }
+}
 ```
+
+```{#lst-hello .cpp lst-cap="hello"}
+int8_t hello;
+
+void main(void) {
+  hello = 1;
+
+  while(true) {
+    hello++;
+    if(hello=10) {
+      hello = 0;
+    }
+  }
+}
+```
+
+@lst-hello
+
+
+:::{#lst-hello2}
+
+```cpp
+int8_t hello;
+
+void main(void) {
+  hello = 1;
+
+  while(true) {
+    hello++;
+    if(hello=10) {
+      hello = 0;
+    }
+  }
+}
+```
+
+Hello #2
+
+:::
+
+@lst-hello2
