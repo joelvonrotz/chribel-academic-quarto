@@ -171,24 +171,26 @@ fancyhdr:
     left: "\\today"
 ```
 
-> [!CAUTION]
-> Changing the date format is a bit finicky, but it is possible. Following example sets the date format to 'DD.MM.YYYY'.
->
-> ```latex
-> \usepackage[datesep=.]{datetime2}
-> \DTMsetdatestyle{ddmmyyyy}
-> ```
->
-> or in the YAML or frontmatter
->
-> ```yaml
-> format:
->   chribel-academic-quarto-pdf:
->     include-in-header:
->     - text: "\\usepackage[datesep=.]{datetime2}"
->     - text: "\\DTMsetdatestyle{ddmmyyyy}"
-> ```
->
+### Date Format
+
+Changing the date format is a bit finicky, but it is possible. Following example sets the date format to 'DD.MM.YYYY'.
+
+```latex
+\usepackage[datesep=.]{datetime2}
+\DTMsetdatestyle{ddmmyyyy}
+```
+
+or in the project YAML or document frontmatter
+
+```yaml
+format:
+  chribel-academic-quarto-pdf:
+    include-in-header:
+    - text: "\\usepackage[datesep=.]{datetime2}"
+    - text: "\\DTMsetdatestyle{ddmmyyyy}"
+```
+
+> [!IMPORTANT]
 > `\today` needs to be replaced with `\DTMtoday` in the document.
 
 ### Font-Family
@@ -223,8 +225,6 @@ There are two examples, which render to `.pdf`-documents.
 
 - \[[template_document.qmd](template_document.qmd)\]: document using the YAML [frontmatter](https://quarto.org/docs/manuscripts/authoring/vscode.html#front-matter) 
 - \[[template_project.qmd](template_project.qmd)\]: [project](https://quarto.org/docs/projects/quarto-projects.html) using the document options from [_quarto.yml](_quarto.yml).
-
----
 
 ## Defaults values (found in `_extension.yml`)
 
