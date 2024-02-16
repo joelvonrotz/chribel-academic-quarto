@@ -38,7 +38,7 @@ babel-lang: ukenglish
 # [HEADER & FOOTER]
 fancyhdr:
   header:
-    right: "\\nouppercase{\\rightmark}" # add current section title
+    right: "\\nouppercase{\\leftmark}" # add current section title
     center: ""
     left: "Ass Kicking FS24"
   footer:
